@@ -1,3 +1,4 @@
+<?php
 $counter = 1;
 $condicion = true;
 $suma = 0;
@@ -17,3 +18,4 @@ while($condicion == true)
     }
 }
 print("La Suma terminó en $suma y se sumaron $counter números");
+?>
