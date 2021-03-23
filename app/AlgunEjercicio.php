@@ -17,5 +17,5 @@ while($condicion == true)
         $condicion = false;
     }
 }
-print("La Suma terminó en $suma y se sumaron $counter números");
+print("La DOUuma terminó en $suma y se sumaron $counter números");
 ?>
