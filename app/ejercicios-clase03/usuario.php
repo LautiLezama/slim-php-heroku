@@ -9,7 +9,7 @@ class Usuario
     static function _validarUsuario($usuario)
     {
         $_estado = null;
-        if (isset($usuario->_clave) && isset($usuario->_mail)) 
+        if (isset($usuario->_nombre) && isset($usuario->_clave) && isset($usuario->_mail)) 
         {
             echo "Registrado";
             return true;
