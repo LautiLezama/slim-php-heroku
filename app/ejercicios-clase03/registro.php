@@ -5,7 +5,10 @@ $nuevoUsuario = new Usuario();
 $nuevoUsuario->_usuario = $_POST["nombre"];
 $nuevoUsuario->_clave = $_POST["clave"];
 $nuevoUsuario->_mail = $_POST["mail"];
-echo Usuario::_validarUsuario($nuevoUsuario);
+if(Usuario::_validarUsuario($nuevoUsuario))
+{
+    Usuario::_altaUsuario($nuevoUsuario);
+}
 
 
 ?>
