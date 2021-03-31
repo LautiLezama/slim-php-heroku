@@ -6,7 +6,7 @@ class Auto
     private $_marca;
     private $_fecha;
 
-    public function __construct($marca, $color, $precio = 0, $fecha = 0)
+    public function __construct($marca, $color, $precio = "", $fecha = "")
     {
         $this->_marca = $marca;
         $this->_color = $color;
