@@ -6,23 +6,17 @@ class Usuario
     public $_clave;
     public $_mail;
 
-    static function _validarUsuario(Usuario $usuario)
+    public function __construct($nombre, $clave, $mail)
     {
-        $_estado = null;
-        if (isset($usuario->_nombre) && isset($usuario->_clave) && isset($usuario->_mail)) 
-        {
-            echo "Registrado";
-            return true;
-        } else {
-            echo "Faltan datos";
-            return false;
-        }
+        $this->_nombre = $nombre;
+        $this->_clave = $clave;
+        $this->_mail = $mail;
     }
 
-    static function _altaUsuario(Usuario $usuario)
+    public function _altaUsuario()
     {
         $miArchivo = fopen("usuarios.csv", "a");
-        $datos= "$usuario->_nombre,$usuario->_clave,$usuario->_mail";
+        $datos= "$this->_nombre,$this->_clave,$this->_mail";
         fwrite($miArchivo, "$datos\n");
         fclose($miArchivo);
     }

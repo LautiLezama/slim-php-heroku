@@ -1,14 +1,19 @@
 <?php
 
 include "usuario.php";
-$nuevoUsuario = new Usuario();
-$nuevoUsuario->_nombre = $_POST["nombre"];
-$nuevoUsuario->_clave = $_POST["clave"];
-$nuevoUsuario->_mail = $_POST["mail"];
-if(Usuario::_validarUsuario($nuevoUsuario))
+
+if(isset($_POST["nombre"]) && isset($_POST["clave"]) && isset($_POST["mail"]))
 {
-    Usuario::_altaUsuario($nuevoUsuario);
+    $nombre = $_POST["nombre"];
+    $clave = $_POST["clave"];
+    $mail = $_POST["mail"];
+    $nuevoUsuario = new Usuario($nombre,$clave,$mail);
+    
+    $nuevoUsuario->_altaUsuario();
 }
+
+
+
 
 
 ?>
