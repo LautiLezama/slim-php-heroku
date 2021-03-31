@@ -6,7 +6,7 @@ class Usuario
     public $_clave;
     public $_mail;
 
-    static function _validarUsuario($usuario)
+    static function _validarUsuario(Usuario $usuario)
     {
         $_estado = null;
         if (isset($usuario->_nombre) && isset($usuario->_clave) && isset($usuario->_mail)) 
@@ -19,7 +19,7 @@ class Usuario
         }
     }
 
-    static function _altaUsuario($usuario)
+    static function _altaUsuario(Usuario $usuario)
     {
         $miArchivo = fopen("usuarios.csv", "a");
         $datos= "$usuario->_nombre,$usuario->_clave,$usuario->_mail";
