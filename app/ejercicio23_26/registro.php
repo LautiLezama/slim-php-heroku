@@ -11,7 +11,7 @@ if(isset($_POST["nombre"]) && isset($_POST["clave"]) && isset($_POST["mail"]) &&
     $nuevoUsuario = new Usuario($nombre,$clave,$mail,$id,$fecha,basename( $_FILES["imagen"]["name"]));
 
     
-    $destino = "archivos/" . $_FILES["imagen"]["name"];
+    $destino = "Usuario/Fotos/" . $_FILES["imagen"]["name"];
 
     
     $nuevoUsuario->_altaUsuario();
