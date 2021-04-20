@@ -23,11 +23,6 @@ if(isset($_GET["listado"]))
     }
 
 
-    
  } 
-
-
-
-
 
 ?>
